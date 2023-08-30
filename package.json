@@ -1,5 +1,5 @@
 {
-  "name": "astropod",
+  "name": "@advanceed-astro/astro-pod",
   "description": "Astropod is a free and open-source serverless podcast template. Host your podcast for free using online third-party services.",
   "type": "module",
   "author": "Manuel Ernesto Garcia",
@@ -10,25 +10,32 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "webp": "go-webp remove=false change=true excludeFiles=\"favicon.png\""
   },
   "dependencies": {
-    "@astrojs/image": "^0.17.2",
+    "@astrojs/image": "^0.17.3",
     "@astrojs/mdx": "^0.19.7",
-    "@astrojs/rss": "^2.4.3",
-    "@astrojs/sitemap": "^1.3.3",
-    "@astrojs/tailwind": "^3.1.3",
-    "astro": "^2.7.3",
+    "@astrojs/rss": "^2.4.4",
+    "@astrojs/tailwind": "^4.0.0",
+    "astro": "^2.10.15",
     "astro-netlify-cms": "^0.5.3",
-    "daisyui": "^3.1.7",
+    "daisyui": "^3.6.3",
     "dayjs": "^1.11.9",
-    "marked": "^7.0.2",
+    "marked": "^7.0.5",
     "marked-plaintext": "^0.0.2",
-    "sharp": "^0.32.1",
+    "netlify-cli": "^16.2.0",
+    "sharp": "^0.32.5",
     "xml2js": "^0.6.2"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
-    "astro-robots-txt": "^0.5.0"
+    "astro-compress": "^2.0.14",
+    "astro-compressor": "^0.4.0",
+    "astro-robots-txt": "^0.5.0",
+    "astro-sitemap": "^0.6.0",
+    "open-props": "^1.5.15",
+    "postcss": "^8.4.29",
+    "postcss-jit-props": "^1.0.13"
   }
 }

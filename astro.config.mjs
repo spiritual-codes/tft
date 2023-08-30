@@ -1,38 +1,38 @@
 import { defineConfig } from "astro/config";
-import mdx from "@astrojs/mdx";
-import sitemap from "@astrojs/sitemap";
-import tailwind from "@astrojs/tailwind";
-import NetlifyCMS from "astro-netlify-cms";
-import dcapConfig from "./decap.config.mjs";
 import astropodConfig from "./.astropod/astropod.config.json";
-import robotsTxt from "astro-robots-txt";
-
-// https://astro.build/config
+import compress from "astro-compress";
+import compressor from "astro-compressor";
+import dcapConfig from "./decap.config.mjs";
+import mdx from "@astrojs/mdx";
+import NetlifyCMS from "astro-netlify-cms";
 import image from "@astrojs/image";
+import robotsTxt from "astro-robots-txt";
+import sitemap from "astro-sitemap";
+import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: astropodConfig.site,
   integrations: [
+    compress(),
+    compressor(),
     robotsTxt({
-      policy: [
-        {
-          userAgent: "*",
-          allow: "/",
-          disallow: "/admin",
-        },
-      ],
-    }),
+      policy: [{
+        userAgent: "*",
+        allow: "/",
+        disallow: "/admin"
+      }]
+    }), 
     mdx(),
     sitemap(),
     tailwind(),
     image({
       serviceEntryPoint: "@astrojs/image/sharp",
       cacheDir: "./.cache/image",
-      logLevel: "debug",
+      logLevel: "debug"
     }),
     NetlifyCMS({
-      config: dcapConfig(),
-    }),
+      config: dcapConfig()
+    })
   ],
+  site: astropodConfig.link
 });

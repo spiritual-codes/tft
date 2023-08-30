@@ -1,11 +1,11 @@
 {
-  "spotify": "",
-  "googlePodcast": "",
-  "applePodcast": "",
+  "spotify": "https://open.spotify.com/show/3VvD0g0XvmGq57NXhG5Eee",
+  "googlePodcast": "https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy81NmYxZTdkNC9wb2RjYXN0L3Jzcw==",
+  "applePodcast": "https://podcasts.apple.com/podcast/id1563350772",
   "easyPodcast": "",
-  "amazonMusic": "",
+  "amazonMusic": "https://music.amazon.de/podcasts/8c45d990-e95f-48a9-8a25-129b057c00b8/twin-flame-transformation",
   "fountain": "",
   "ivoox": "",
-  "pocketcasts": "",
+  "pocketcasts": "https://pca.st/itunes/1563350772",
   "deezer": ""
 }
